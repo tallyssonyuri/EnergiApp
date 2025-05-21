@@ -1,4 +1,3 @@
-// src/pages/ConsumptionRegistration.tsx
 import React, { useState, useEffect } from 'react';
 
 interface Appliance {
@@ -13,7 +12,6 @@ export default function ConsumptionRegistration() {
   const [amount, setAmount] = useState<number|''>('');
 
   useEffect(() => {
-    // buscar lista de aparelhos da API
     setAppliances([
       { id: '1', name: 'Geladeira' },
       { id: '2', name: 'Ar-condicionado' },

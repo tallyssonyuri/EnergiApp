@@ -6,7 +6,6 @@ export default function ApplianceRegistration() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // lógica de cadastro aqui
     console.log({ name, power });
   };
 

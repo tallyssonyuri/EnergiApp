@@ -7,7 +7,6 @@ export default function Cadastro() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // lógica de cadastro aqui
     console.log({ name, email, password });
   };
 

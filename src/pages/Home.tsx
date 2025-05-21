@@ -9,7 +9,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-// Dados de exemplo para o gráfico de consumo diário
 const dailyData = [
   { hour: '0', kWh: 0.2 },
   { hour: '4', kWh: 0.5 },
@@ -19,7 +18,6 @@ const dailyData = [
   { hour: '20', kWh: 1.0 },
 ];
 
-// Dados de exemplo para principais aparelhos
 const mainAppliances = [
   { name: 'Ar-condicionado', power: 100 },
   { name: 'Geladeira', power: 75 },
@@ -27,7 +25,7 @@ const mainAppliances = [
 ];
 
 export default function Home() {
-  const monthlyConsumption = 284; // Consumo mensal em kWh
+  const monthlyConsumption = 284;
 
   return (
     <div className="bg-gradient-to-b from-yellow-50 via-yellow-100 to-yellow-200 dark:from-black dark:via-gray-900 dark:to-black min-h-screen px-2 sm:px-6 py-4">
@@ -41,7 +39,6 @@ export default function Home() {
         </h1>
       </header>
 
-      {/* Indicador Mensal */}
       <div className="flex justify-center mb-8">
         <div className="w-44 h-44 sm:w-56 sm:h-56 rounded-full bg-yellow-400 shadow-lg flex flex-col items-center justify-center border-8 border-yellow-200 dark:border-gray-800">
           <span className="text-4xl sm:text-5xl font-bold text-black">{monthlyConsumption}</span>
@@ -49,9 +46,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Seções em grid */}
       <div className="space-y-8">
-        {/* Consumo Diário */}
         <section>
           <h2 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Consumo Diário</h2>
           <div className="w-full h-48 sm:h-60 bg-white dark:bg-gray-900 rounded-2xl p-3 shadow">
@@ -70,7 +65,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Principais Aparelhos */}
         <section>
           <h2 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">Principais Aparelhos</h2>
           <div className="grid grid-cols-1 gap-3">

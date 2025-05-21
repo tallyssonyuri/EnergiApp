@@ -20,7 +20,6 @@ const consumptionData = [
 export default function Dashboard() {
   return (
     <div className="bg-black text-white min-h-screen p-4">
-      {/* Header */}
       <header className="flex items-center justify-between mb-6">
         <button className="text-yellow-400 p-2 rounded-full hover:bg-gray-800">
           <ArrowLeft size={28} />
@@ -31,7 +30,6 @@ export default function Dashboard() {
         </button>
       </header>
 
-      {/* Seletor de Eletrodoméstico */}
       <div className="mb-6">
         <h2 className="text-sm text-gray-400 mb-2">ELETRODOMÉSTICO</h2>
         <div className="bg-gray-800 text-white rounded-lg px-4 py-3 flex justify-between items-center">
@@ -40,7 +38,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Data */}
       <div className="mb-6">
         <div className="bg-gray-800 text-white rounded-lg px-4 py-3 flex items-center space-x-3">
           <Calendar size={20} className="text-yellow-400" />
@@ -48,7 +45,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Gráfico de Consumo */}
       <section>
         <div className="bg-gray-800 rounded-lg p-4">
           <ResponsiveContainer width="100%" height={200}>

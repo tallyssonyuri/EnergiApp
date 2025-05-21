@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+# EnergiApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web para monitoramento e registro de consumo de energia elétrica, desenvolvida com React, TypeScript, Vite e TailwindCSS.
 
-Currently, two official plugins are available:
+Aplicação baseada no desgin criado no Figma, disponível em: https://www.figma.com/design/2uWgq57qHpQJbMlNlsRjRc/Gest%C3%A3o-de-consumo-de-energia?node-id=0-1&p=f&t=FArmM4UAkI5cuAi9-0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Abaixo segue a ideia base de como deveria funcionar a aplicação: https://www.figma.com/proto/2uWgq57qHpQJbMlNlsRjRc/Gest%C3%A3o-de-consumo-de-energia?node-id=42-326&starting-point-node-id=42%3A326
 
-## Expanding the ESLint configuration
+Este projeto foi elaborado para a disciplina de CCP310 - Experiência do Usuário Front-End, do curso de Ciência da Computação no Centro Universitário FEI.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Pré-requisitos
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (versão 18 ou superior recomendada)
+- [npm](https://www.npmjs.com/) (geralmente já vem com o Node.js)
+
+## Instalação
+
+Clone o repositório e instale as dependências:
+
+```sh
+git clone https://github.com/tallyssonyuri/energiapp.git
+cd energiapp
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Executando em modo de desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para rodar o projeto localmente com recarregamento automático:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run dev
 ```
+
+Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+
+## Build para produção
+
+Para gerar os arquivos otimizados para produção:
+
+```sh
+npm run build
+```
+
+Os arquivos finais ficarão na pasta `dist/`.
+
+## Visualizar o build de produção localmente
+
+Após o build, você pode visualizar o resultado com:
+
+```sh
+npm run preview
+```
+
+## Scripts disponíveis
+
+- `npm run dev` — Inicia o servidor de desenvolvimento
+- `npm run build` — Gera o build de produção
+- `npm run preview` — Visualiza o build localmente
+- `npm run lint` — Executa o linter (ESLint)
+- `npm run tailwind:init` — Inicializa a configuração do TailwindCSS
+
+## Estrutura do Projeto
+
+```
+EnergiApp/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── desgin/
+├── package.json
+├── tailwind.config.cjs
+├── postcss.config.cjs
+├── tsconfig.json
+└── ...
+```
+
+## Tecnologias
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/) (gráficos)
+- [Lucide React](https://lucide.dev/) (ícones)
+
+---
+

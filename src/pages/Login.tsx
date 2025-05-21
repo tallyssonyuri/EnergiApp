@@ -8,7 +8,6 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // lógica de autenticação aqui
     console.log({ email, password });
   };
 
